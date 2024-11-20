@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
   <title>CSS Grid Sizing Exercise</title>
   <style>
     body {
@@ -95,12 +97,18 @@
     <div class="grid-item">min 200px max 500px wide</div>
     <div class="grid-item">50px high</div>
   </div>
-  <textarea id="user-css" placeholder="Write your CSS code here..." rows="25">
-/* Write your CSS code below to make the purple items size, grow and shrink like the green ones.*/
+  <textarea id="user-css" placeholder="Write your CSS code here..." rows="25">/* Write your CSS code below to make the purple items size, grow and shrink like the green ones.*/
 
-.grid-container {
- 
-}
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto 400px minmax(200px, 500px);  
+      grid-template-rows: 1fr 1fr 2fr;
+      grid-auto-rows: 50px; 
+      width: 80%;
+      background-color: #ddd;
+      padding: 20px;
+      margin: 2rem;
+    }
   
   </textarea>
   <button onclick="applyUserCss()">Apply CSS</button>
